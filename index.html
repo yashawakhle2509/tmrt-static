@@ -1,0 +1,666 @@
+<html lang="en">
+    <head>
+        <title>TMRT</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        
+<style>
+
+body{
+    display: block;
+    overflow-x: hidden;
+}
+
+
+nav{
+    background-color: white;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+
+
+.navbar-brand{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #683aa4;
+}
+
+nav ul li a{
+    color: #a9a9a9;
+    font-size: 22px;
+    margin: auto 10px; 
+}
+
+nav ul li a:hover{
+    color: #683aa4;
+}
+
+section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+ 
+section h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #683aa4;
+    text-align: left;
+    margin-bottom: 20px;
+} 
+
+section p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+button{
+    max-width: 50%;
+    border-radius: 50px !important;
+}
+
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+</style>
+    </head>
+    <body>
+
+<!-- JavaScript Bundle with Popper -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+<nav class="py-3 navbar navbar-expand-lg fixed-top auto-hiding-navbar navbar-light bg-light">
+     <div class="container">
+       <a class="navbar-brand" href="#"> TMRT</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav ms-auto">
+           <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html">Home</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="http://127.0.0.1:5500/rob1.html">Robot 1</a>
+           </li>
+            <li class="nav-item">
+             <a class="nav-link" href="http://127.0.0.1:5500/rob2.html">Robot 2</a>
+           </li>
+           
+          <li class="nav-item">
+        
+           </li>
+         </ul>
+       </div>
+     </div>
+  </nav>
+<br>
+<br>
+                    
+                  
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family: 'Playfair Display', serif;
+            
+            display: grid;
+            background-color: #f4f4f4;
+            align-content: center;
+            min-height: 100vh;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 90vh;
+            width: 85vw;
+            margin: 0 auto;
+        }
+        .image{
+            background: url("robot1.jpg") center/cover no-repeat;
+        }
+        .content{
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content h2{
+            text-transform: uppercase;
+            font-size: 36px;
+            letter-spacing: 6px;
+            opacity: 0.9;
+        }
+        .content span{
+            height: 0.5px;
+            width: 80px;
+            background: #777;
+            margin: 30px 0;
+        }
+        .content p{
+            padding-bottom: 15px;
+            font-weight: 300;
+            opacity: 0.7;
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .links{
+            margin: 15px 0;
+        }
+        .links li{
+            border: 0.5px solid #777;
+            list-style: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            width: 160px;
+            text-align: center;
+        }
+        .links li a{
+            text-transform: uppercase;
+            color: #777;
+            text-decoration: none;
+        }
+        .links li:hover{
+            border-color: #06d6a0;
+        }
+        .links li:hover a{
+            color :#06d6a0;
+        }
+        .vertical-line{
+            height: 30px;
+            width: 0.5px;
+            background: #777;
+            margin: 0 auto;
+        }
+        .icons{
+            display: flex;
+            padding: 15px 0;
+        }
+        .icons li{
+            display: block;
+            padding: 5px;
+            margin: 5px;
+        }
+        .icons li i{
+            font-size: 26px;
+            opacity: 0.8;
+        }
+        .icons li i:hover{
+            color: #06d6a0;
+        }
+        
+        
+        /*******/
+        
+        @media(max-width: 992px){
+            section{
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+            .image{
+                height: 100vh;
+            }
+            .content{
+                height: 100vh;
+            }
+            .content h2{
+                font-size: 20px;
+                margin-top: 50px;
+            }
+            .content span{
+                margin: 20px 0;
+            }
+            .content p{
+                font-size: 14px;
+            }
+            .links li a{
+                font-size: 14px;
+            }
+            .links{
+                margin: 5px 0;
+            }
+            .links li{
+                padding: 6px 10px;
+            }
+            .icons li i{
+                font-size: 15px;
+            }
+        }</style>
+    <style>
+
+        body{
+            display: block;
+            overflow-x: hidden;
+        }
+        
+        
+        nav{
+            background-color: white;
+        }
+        
+        .navbar-brand img {
+            max-height: 50px;
+        }
+        
+        
+        
+        .navbar-brand{
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: #683aa4;
+        }
+        
+        nav ul li a{
+            color: #a9a9a9;
+            font-size: 22px;
+            margin: auto 10px; 
+        }
+        
+        nav ul li a:hover{
+            color: #683aa4;
+        }
+        
+        section{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+         
+        section h1{
+            text-transform: uppercase;
+            font-weight: 900;
+            color: #683aa4;
+            text-align: left;
+            margin-bottom: 20px;
+        } 
+        
+        section p{
+            font-size: 16px;
+            font-weight: 300;
+        }
+        
+        button{
+            max-width: 50%;
+            border-radius: 50px !important;
+        }
+        
+        
+        .block {
+          display: block;
+          width: 100%;
+          border: none;
+          background-color: #04AA6D;
+          padding: 14px 28px;
+          font-size: 16px;
+          cursor: pointer;
+          text-align: center;
+        }
+        
+        
+        
+        </style>
+  </head>
+  <body>
+
+    <!-- JavaScript Bundle with Popper -->
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        
+    <nav class="py-3 navbar navbar-expand-lg fixed-top auto-hiding-navbar navbar-light bg-light">
+         <div class="container">
+           <a class="navbar-brand" href="#"> TMRT</a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+                 <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html">Home</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="http://127.0.0.1:5500/rob1.html">Robot 1</a>
+               </li>
+                <li class="nav-item">
+                 <a class="nav-link" href="http://127.0.0.1:5500/rob2.html">Robot 2</a>
+               </li>
+               
+              <li class="nav-item">
+            
+               </li>
+             </ul>
+           </div>
+         </div>
+      </nav>
+    <br>
+    <br>
+                        
+    <div class="home-page">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <div class="wix-bg-media-wix"></div>
+          <img class="main-button" src="img/main-button.svg" />
+          <div class="div-lwbaav"></div>
+          <div class="header"></div>
+          <div class="div"></div>
+          <div class="header-section-link"></div>
+          <div class="text-wrapper">Save Our Water</div>
+          
+          <div class="main">
+            <div class="section">
+              <div class="heading">
+                <div class="p-font"><p class="p">Desilting Wells to Ensure Steady and Clean Water Source</p></div>
+              </div>
+              <div class="text-wrapper-2"> DESLITTING WELLS</div>
+              <div class="link"><div class="text-wrapper-3">Explore Us</div></div>
+            </div>
+            <div class="section-2">
+              <div class="div-2">
+                <div class="wow-image-wrapper"><div class="wow-image"></div></div>
+                <div class="div-2">
+                  <div class="div-wrapper"><div class="text-wrapper-4">1000+</div></div>
+                  <div class="div-comp"><div class="text-wrapper-5">Wells Desilted</div></div>
+                </div>
+              </div>
+              <div class="overlap-group">
+                <div class="wow-image-bf-wrapper"><div class="wow-image-bf"></div></div>
+                <div class="section-3">
+                  <div class="heading-2"><div class="text-wrapper-6">10M+</div></div>
+                  <div class="div-wrapper-2">
+                    <div class="cubic-meters-of-silt">Cubic Meters<br />of Silt<br />Removed</div>
+                  </div>
+                </div>
+              </div>
+              <div class="overlap-2">
+                <div class="wow-image-bf-wrapper"><div class="wow-image-2"></div></div>
+                <div class="section-3">
+                  <div class="heading-2"><div class="text-wrapper-7">200+</div></div>
+                  <div class="div-wrapper-2">
+                    <div class="farmers-served">Farmers<br />Served</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-4">
+              <div class="heading-what-we">What We Aim</div>
+              <div class="section-5">
+                <div class="wow-image-3"></div>
+                <div class="fertilizer-wrapper">
+                  <div class="fertilizer">Fertilizer Production and<br />Employment</div>
+                </div>
+                <div class="the-silt-removed-wrapper">
+                  <p class="the-silt-removed">
+                    The silt removed during desilting<br />can be used as a natural fertilizer,<br />enhancing crop
+                    yields, and<br />reducing the need for chemical<br />fertilizers.
+                  </p>
+                </div>
+              </div>
+              <div class="section-wow-image"></div>
+              <div class="section-heading">Desilting Wells</div>
+              <p class="section-we">
+                We specialize in desilting wells,<br />which involves removing<br />accumulated silt and debris from<br />wells.
+                Our skilled team uses the<br />latest technology and equipment<br />to ensure efficient and effective<br />desilting,
+                resulting in a steady and<br />clean water source for farmers.
+              </p>
+              <div class="section-6">
+                <div class="wow-image-4"></div>
+                <div class="heading-3"><div class="text-wrapper-8">Water Accessibility</div></div>
+                <div class="our-solution-ensures-wrapper">
+                  <p class="our-solution-ensures">
+                    Our solution ensures a consistent<br />water supply for efficient<br />agriculture by increasing
+                    well<br />water storage capacity, enabling<br />farmers to maintain healthy<br />crops.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="section-7">
+              <div class="section-8">
+                <div class="heading-4"><div class="text-wrapper-9">Why Choose TMRT ?</div></div>
+                <div class="div-comp-jnxpu">
+                  <p class="the-marine-robotics">
+                    The Marine Robotics Team (TMRT) is a dedicated group of individuals<br />with a strong mission to
+                    make a positive impact in the field of<br />agriculture. Our primary goal is to address critical
+                    issues that affect<br />farmers and their livelihoods. We strive to provide innovative solutions<br />to
+                    transform the agricultural landscape and improve the well-being of<br />farming communities.
+                  </p>
+                  <p class="the-increasing-rates">
+                     The increasing rates of farmer suicides, driven by low harvests and<br />insufficient income,
+                    deeply affect farming communities. We are<br />dedicated to preventing such tragic outcomes by
+                    improving<br />agricultural productivity, helping farmers escape the cycle of debt,<br />and
+                    providing a sustainable future. By addressing these challenges,<br />we hope to reduce the economic
+                    and emotional burden on farming<br />families.
+                  </p>
+                </div>
+                <div class="link-2"><div class="text-wrapper-10">Contact Us</div></div>
+              </div>
+              <div class="section-wow-image-2"></div>
+            </div>
+            <div class="section-9">
+              <div class="heading-meet-our">Meet Our Team</div>
+              <div class="text-wrapper-11">Dedication. Expertise. Passion.</div>
+              <p class="welcome-to-our-team">
+                Welcome to our team section. Here at TMRT, we have a dedicated and<br />passionate team that is
+                committed to providing the best irrigation<br />equipment solutions. Get to know our team members and
+                discover what<br />makes us special.
+              </p>
+              <div class="div-comp-loqrcek">
+                <div class="list-listitem-wrapper">
+                  <div class="list-listitem">
+                    <div class="wow-image-IMG"></div>
+                    <div class="p-font-2"><div class="text-wrapper-12">Art Director</div></div>
+                    <div class="p-font-3"><div class="text-wrapper-13">Mr. Ninad Mehendale</div></div>
+                    <div class="p-font-4"><div class="text-wrapper-14">Electronics Team</div></div>
+                    <div class="link-info-wrapper"><div class="link-info">info@tmrtwellwater.com</div></div>
+                    <div class="list-social-bar">
+                      <div class="item-link-wow-image"></div>
+                      <div class="item-link-wow-image-2"></div>
+                      <div class="item-link-wow-image-3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="overlap-3">
+                  <div class="list-listitem-2">
+                    <div class="wow-image-IMG-2"></div>
+                    <div class="p-font-2"><div class="text-wrapper-15">Tech Lead</div></div>
+                    <div class="p-font-3"><div class="text-wrapper-16">Mr. Dilip Bhanushali</div></div>
+                    <div class="p-font-4"><div class="text-wrapper-17">Computer Science Team</div></div>
+                    <div class="p-font-5"><div class="link-info-2">info@tmrtwellwater.com</div></div>
+                    <div class="list-social-bar-2">
+                      <div class="item-link-wow-image"></div>
+                      <div class="item-link-wow-image-2"></div>
+                      <div class="item-link-wow-image-3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="overlap-4">
+                  <div class="list-listitem-2">
+                    <div class="wow-image-IMG-3"></div>
+                    <div class="p-font-2"><div class="text-wrapper-18">Position/Role</div></div>
+                    <div class="p-font-3"><div class="text-wrapper-19">Mr. Ketan Kataria</div></div>
+                    <div class="p-font-4"><div class="link-info-2">info@tmrtwellwater.com</div></div>
+                    <div class="p-font-5"><div class="text-wrapper-20">123-456-7890</div></div>
+                    <div class="list-social-bar-2">
+                      <div class="item-link-wow-image"></div>
+                      <div class="item-link-wow-image-2"></div>
+                      <div class="item-link-wow-image-3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="overlap-5">
+                  <div class="list-listitem-2">
+                    <div class="wow-image-IMG-4"></div>
+                    <div class="p-font-2"><div class="text-wrapper-21">Product Designer</div></div>
+                    <div class="p-font-6">
+                      <div class="captain-aastha">Captain: Aastha<br />Kataria</div>
+                    </div>
+                    <div class="p-font-4"><div class="link-info-2">info@tmrtwellwater.com</div></div>
+                    <div class="p-font-5"><div class="text-wrapper-20">123-456-7890</div></div>
+                    <div class="list-social-bar-2">
+                      <div class="item-link-wow-image"></div>
+                      <div class="item-link-wow-image-2"></div>
+                      <div class="item-link-wow-image-3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="overlap-6">
+                  <div class="list-listitem-2">
+                    <div class="wow-image-IMG-5"></div>
+                    <div class="p-font-2"><div class="text-wrapper-22">Customer Support Lead</div></div>
+                    <div class="p-font-6">
+                      <div class="co-captain-anagh">Co-Captain: Anagh<br />Gharat</div>
+                    </div>
+                    <div class="p-font-4"><div class="link-info-2">info@tmrtwellwater.com</div></div>
+                    <div class="p-font-5"><div class="text-wrapper-20">123-456-7890</div></div>
+                    <div class="list-social-bar-2">
+                      <div class="item-link-wow-image"></div>
+                      <div class="item-link-wow-image-2"></div>
+                      <div class="item-link-wow-image-3"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="overlap-7">
+                  <div class="list-listitem-2">
+                    <div class="wow-image-IMG-6"></div>
+                    <div class="p-font-2"><div class="text-wrapper-23">HR Lead</div></div>
+                    <div class="p-font-3"><div class="text-wrapper-24">Marketing Team</div></div>
+                    <div class="p-font-4"><div class="link-info-2">info@tmrtwellwater.com</div></div>
+                    <div class="p-font-5"><div class="text-wrapper-20">123-456-7890</div></div>
+                    <div class="list-social-bar-2">
+                      <div class="item-link-wow-image"></div>
+                      <div class="item-link-wow-image-2"></div>
+                      <div class="item-link-wow-image-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="footer-by-save">©2035 by Save Our Shores. Powered and secured by Wix</p>
+          <div class="footer-list-social"></div>
+          <div class="footer-list-social-2"></div>
+          <div class="footer-list-social-3"></div>
+          <div class="div-card">
+            <div class="logo-notext-png"></div>
+            <div class="heading-SAUVC">SAUVC</div>
+            <p class="text-wrapper-25">
+              THE SINGAPORE AUTONOMOUS UNDERWATER VEHICLE<br />CHALLENGE (SAUVC). THE SAUVC COMPETITION CHALLENGES<br />PARTICIPANT
+              TEAMS TO BUILD AN AUV WHICH CAN PERFORM<br />GIVEN TASKS.
+            </p>
+            <div class="link-3"><div class="text-wrapper-26">More</div></div>
+          </div>
+          <div class="section-heading-2">THE MARINE ROBOTICS TEAM</div>
+          <div class="section-section">
+            <div class="div-img-container"><div class="ninad-jpg"></div></div>
+            <div class="heading-dr-ninad">Dr. Ninad Mehandele</div>
+            <div class="mentor">MENTOR</div>
+            <div class="div-icons">
+              <div class="symbol-wrapper"><div class="symbol"></div></div>
+              <div class="link-4"><div class="symbol"></div></div>
+            </div>
+          </div>
+          <div class="section-section-2">
+            <div class="div-img-container"><div class="rishikesh-jpg"></div></div>
+            <div class="heading-rishikesh">Aastha Kataria</div>
+            <div class="captain">CAPTAIN</div>
+            <div class="div-icons">
+              <div class="symbol-wrapper"><div class="symbol"></div></div>
+              <div class="link-5"><div class="symbol"></div></div>
+              <div class="link-6"><div class="symbol-2"></div></div>
+            </div>
+          </div>
+          <div class="section-section-3">
+            <div class="div-img-container"><div class="anagh-jpg"></div></div>
+            <div class="heading-anagh">Anagh Gharat</div>
+            <div class="vice-captain">VICE-CAPTAIN</div>
+            <div class="div-icons">
+              <div class="symbol-wrapper"><div class="symbol"></div></div>
+              <div class="link-4"><div class="symbol"></div></div>
+            </div>
+          </div>
+          <button class="section-button"><div class="link-view-more">View More</div></button>
+          <div class="section-10">
+            <div class="heading-sponsors">SPONSORS</div>
+            <div class="div-col-sm">
+              <div class="link-dessault"></div>
+              <div class="heading-dassault">Dassault-Systèmes</div>
+              <p class="dassault-syst-mes-SE">
+                Dassault Systèmes SE is a French multinational software<br />corporation which develops software for 3D
+                product design,<br />simulation, manufacturing and other 3D related products.
+              </p>
+            </div>
+            <div class="div-col-sm-2">
+              <div class="link-irobokid-mumbai"></div>
+              <div class="heading-irobokid">irobokid</div>
+              <p class="with-over-years">
+                With over 10 years of experience of teaching STEM programs to<br />thousands of children &amp;
+                partnering with over 100’s of schools, we<br />are pleased to share FLITE with you (Future Learning in
+                Technology<br />Education)
+              </p>
+            </div>
+            <div class="div-col-sm-3">
+              <div class="link-IMG"></div>
+              <p class="heading-k-j">K.J. Somaiya College Of Engineering</p>
+              <p class="KJSCE-is-one-of-the">
+                KJSCE is one of the best engineering colleges in India, ranking in<br />the top amongst B.Tech and
+                M.Tech colleges for its excellent<br />education.
+              </p>
+            </div>
+          </div>
+          <div class="section-heading-3">PARTICIPATION IN VARIOUS EVENTS</div>
+          <div class="div-card-2">
+            <div class="logo-for-national"></div>
+            <div class="heading-INSAUVC">INSAUVC</div>
+            <p class="national-institute">
+              NATIONAL INSTITUTE OF OCEAN TECHNOLOGY (NIOT),<br />CONDUCTS A COMPETITION FOR STUDENTS TO VISUALIZE
+              AND<br />DESIGN AN AUV, KNOWN AS THE INDIAN STUDENT AUTONOMOUS<br />UNDERWATER VEHICAL CHALLENGE.
+            </p>
+            <div class="link-3"><div class="text-wrapper-26">More</div></div>
+          </div>
+          <div class="heading-5">Competitions participated</div>
+          <div class="div-card-3">
+            <div class="robosub-logo-vert"></div>
+            <div class="heading-robosub">Robosub</div>
+            <p class="text-wrapper-25">
+              THE FUNDAMENTAL GOAL OF THE ROBOSUB COMPETITION IS<br />FOR AN AUTONOMOUS UNDERWATER VEHICLE (AUV) TO<br />DEMONSTRATE
+              ITS AUTONOMY BY COMPLETING UNDERWATER<br />TASKS, WITH A NEW THEME EACH YEAR.
+            </p>
+            <div class="link-3"><div class="text-wrapper-26">More</div></div>
+          </div>
+          <div class="section-link-jpg"></div>
+          <div class="section-link-g-jpg"></div>
+          <div class="section-link-jpg-2"></div>
+          <div class="section-link-jpg-3"></div>
+          <div class="section-link-jpg-4"></div>
+          <div class="section-link-working"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
